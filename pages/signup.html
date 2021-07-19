@@ -10,6 +10,8 @@
     <link rel="icon" href="../assets/icons/ice-cream.png" type="image/x-icon">
     <link rel="stylesheet" href="../styles/utils.css">
     <link rel="stylesheet" href="../styles/signup-style.css">
+    <script src="../js/lib/jquery-3.6.0.min.js"></script>
+    <script src="../js/signup-validation.js"></script>
     <title>Scoops-SIGNUP</title>
 </head>
 <body>
@@ -26,7 +28,7 @@
         <div class="signup-area flex justify-between items-center">
             <div class="signup-form-area">
                 <div class="form-title">Signup Form</div>
-                <form novalidate>
+                <form novalidate id="signup-form">
                     <section class="form-section">
                         <div class="section-title flex items-center">
                             <img src="../assets/icons/info-magenta.svg" alt="info">
@@ -36,15 +38,15 @@
                             <label for="name">Name <sup>*</sup></label>
                             <div class="form-item-control flex">
                                 <input type="text" id="name">
-                                <img src="../assets/icons/tick-green.svg" alt="tick" style="height: 20px;">
+                                <img src="../assets/icons/tick-green.svg" id="name-tick" hidden alt="tick" style="height: 20px;">
                             </div>
-                            <span class="error-span" id="name-error">Testing</span>
+                            <span class="error-span" id="name-error"></span>
                         </div>
                         <div class="form-item">
                             <label for="email">Email <sup>*</sup></label>
                             <div class="form-item-control flex">
                                 <input type="email" id="email">
-                                <img src="../assets/icons/tick-green.svg" alt="tick" style="height: 20px;">
+                                <img src="../assets/icons/tick-green.svg" id="email-tick" alt="tick" style="height: 20px;">
                             </div>
                             <span class="error-span" id="email-error">Testing</span>
                         </div>
