@@ -65,7 +65,7 @@ $(()=>{
     signupFormEl.submit((e)=>{
         e.preventDefault();
         if(isFormValid()){
-            alert("Registered successfully.");
+            alert("Signup request sent successfully.");
         }
         else{
             return false;
@@ -269,7 +269,7 @@ function isFormValid(){
 
 function isNameValid(name){
     let isValid = false, err = "";
-    if(name == ""){
+    if(name == "" || name.trim().length == 0){
         err = "This field is required.";
     }
     else if(name.length > 60){
@@ -287,7 +287,7 @@ function isNameValid(name){
 function isEmailValid(email){
     let isValid = false, err = "";
     let regEx = new RegExp("^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$");
-    if(email == ""){
+    if(email == "" || email.trim().length == 0){
         err = "This field is required.";
     }
     else if(!regEx.test(email)){
@@ -306,7 +306,7 @@ function isEmailValid(email){
 // 2021-07-15 => yyyy-mm-dd
 function isDOBValid(dob){
     let isValid = false, err = "";
-    if(dob == ""){
+    if(dob == "" || dob.trim().length == 0){
         err = "This field is required.";
     }
     else{
@@ -332,7 +332,7 @@ function isDOBValid(dob){
 
 function isContactValid(contact){
     let isValid = false, err = "";
-    if(contact == ""){
+    if(contact == "" || contact.trim().length == 0){
         err = "This field is required.";
     }
     else if(isNaN(contact)){
@@ -352,7 +352,7 @@ function isContactValid(contact){
 
 function isAddressLineValid(address){
     let isValid = false, err = "";
-    if(address == ""){
+    if(address == "" || address.trim().length == 0){
         err = "This field is required.";
     }
     else if(address.length > 80){
@@ -369,7 +369,7 @@ function isAddressLineValid(address){
 
 function isPincodeValid(pincode){
     let isValid = false, err = "";
-    if(pincode == ""){
+    if(pincode == "" || pincode.trim().length == 0){
         err = "This field is required.";
     }
     else if(isNaN(pincode)){
@@ -390,7 +390,7 @@ function isPincodeValid(pincode){
 function isNewPwdValid(password){
     let isValid = false, err = "";
     let regexp= new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])");
-    if(password == ""){
+    if(password == "" || password.trim().length == 0){
         err = "This field is required.";
     }
     else if(password.length < 5 || password.length > 8){
@@ -410,7 +410,7 @@ function isNewPwdValid(password){
 
 function isConfirmPwdValid(password){
     let isValid = false, err = "";
-    if(password == ""){
+    if(password == "" || password.trim().length == 0){
         err = "This field is required.";
     }
     else if(password != newPwdEl.val()){
