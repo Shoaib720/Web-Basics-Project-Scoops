@@ -10,6 +10,8 @@
     <link rel="icon" href="../assets/icons/ice-cream.png" type="image/x-icon">
     <link rel="stylesheet" href="../styles/utils.css">
     <link rel="stylesheet" href="../styles/login-style.css">
+    <script src="../js/lib/jquery-3.6.0.min.js"></script>
+    <script src="../js/login-validation.js"></script>
     <title>Scoops-LOGIN</title>
 </head>
 <body>
@@ -29,22 +31,20 @@
             </div>
             <div class="login-form-area">
                 <div class="form-title">Login</div>
-                <form novalidate>
+                <form novalidate id="login-form">
                     <div class="form-item">
                         <div class="form-item-control flex items-center">
                             <img src="../assets/icons/email-solid-magenta.svg" alt="email">
                             <input type="email" id="email" placeholder="Enter email...">
-                            <img src="../assets/icons/tick-green.svg" alt="tick" style="height: 20px;">
                         </div>
-                        <span class="error-span" id="email-error">Testing</span>
+                        <span class="error-span" id="email-error"></span>
                     </div>
                     <div class="form-item">
                         <div class="form-item-control flex items-center">
                             <img src="../assets/icons/lock-magenta.svg" alt="email">
-                            <input type="password" id="password" placeholder="Enter password...">
-                            <img src="../assets/icons/tick-green.svg" alt="tick" style="height: 20px;">
+                            <input type="password" id="pwd" placeholder="Enter password...">
                         </div>
-                        <span class="error-span" id="pwd-error">Testing</span>
+                        <span class="error-span" id="pwd-error"></span>
                     </div>
                     <div class="cta">
                         <input class="btn btn-primary btn-large" type="submit" id="login-btn" value="Login">
