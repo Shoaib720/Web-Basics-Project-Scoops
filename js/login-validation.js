@@ -14,9 +14,9 @@ $(()=>{
     pwdEl.blur(()=>{validatePassword()});
 
     loginFormEl.submit((e)=>{
-        e.preventDefault();
         if(isFormValid()){
             alert("Login request sent successfully.");
+            return true;
         }
         else{
             return false;

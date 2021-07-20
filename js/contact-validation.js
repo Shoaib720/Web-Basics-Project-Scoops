@@ -20,9 +20,9 @@ $(()=>{
         messageLengthEl.html((250 - messageEl.val().length) + " Characters Remaining");
     });
     contactFormEl.submit((e)=>{
-        e.preventDefault();
         if(isFormValid()){
             alert("Message request sent successfully.");
+            return true;
         }
         else{
             return false;

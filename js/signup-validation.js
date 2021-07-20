@@ -63,9 +63,9 @@ $(()=>{
     });
     agreementEl.change(()=>{validateAgreement()});
     signupFormEl.submit((e)=>{
-        e.preventDefault();
         if(isFormValid()){
             alert("Signup request sent successfully.");
+            return true;
         }
         else{
             return false;
