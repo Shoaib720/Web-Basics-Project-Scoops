@@ -46,9 +46,9 @@
                             <label for="email">Email <sup>*</sup></label>
                             <div class="form-item-control flex">
                                 <input type="email" id="email">
-                                <img src="../assets/icons/tick-green.svg" id="email-tick" alt="tick" style="height: 20px;">
+                                <img src="../assets/icons/tick-green.svg" id="email-tick" hidden alt="tick" style="height: 20px;">
                             </div>
-                            <span class="error-span" id="email-error">Testing</span>
+                            <span class="error-span" id="email-error"></span>
                         </div>
                         <div class="form-item">
                             <label>Gender</label>
@@ -74,19 +74,19 @@
                         <div class="form-item">
                             <label for="dob">Date of Birth <sup>*</sup></label>
                             <div class="form-item-control flex items-center">
-                                <input type="date" id="dob">
-                                <img src="../assets/icons/tick-green.svg" alt="tick" style="height: 20px;">
+                                <input type="date" id="dob" min="1900-01-01" max="2020-12-31">
+                                <img src="../assets/icons/tick-green.svg" alt="tick" id="dob-tick" hidden style="height: 20px;">
                             </div>
-                            <span class="error-span" id="dob-error">Testing</span>
+                            <span class="error-span" id="dob-error"></span>
                         </div>
                         <div class="form-item">
                             <label for="contact">Contact <sup>*</sup></label>
                             <div class="form-item-control flex items-center">
                                 <img src="../assets/icons/india-flag.svg" alt="flag" style="height: 20px;">+91
                                 <input type="text" id="contact">
-                                <img src="../assets/icons/tick-green.svg" alt="tick" style="height: 20px;">
+                                <img src="../assets/icons/tick-green.svg" alt="tick" id="contact-tick" hidden style="height: 20px;">
                             </div>
-                            <span class="error-span" id="contact-error">Testing</span>
+                            <span class="error-span" id="contact-error"></span>
                         </div>
                     </section>
                     <section class="form-section">
@@ -98,17 +98,17 @@
                             <label for="address1">Address Line 1 <sup>*</sup></label>
                             <div class="form-item-control flex">
                                 <input type="text" id="address1">
-                                <img src="../assets/icons/tick-green.svg" alt="tick" style="height: 20px;">
+                                <img src="../assets/icons/tick-green.svg" alt="tick" id="address1-tick" hidden style="height: 20px;">
                             </div>
-                            <span class="error-span" id="address1-error">Testing</span>
+                            <span class="error-span" id="address1-error"></span>
                         </div>
                         <div class="form-item">
                             <label for="address2">Address Line 2 <sup>*</sup></label>
                             <div class="form-item-control flex">
                                 <input type="text" id="address2">
-                                <img src="../assets/icons/tick-green.svg" alt="tick" style="height: 20px;">
+                                <img src="../assets/icons/tick-green.svg" alt="tick" id="address2-tick" hidden style="height: 20px;">
                             </div>
-                            <span class="error-span" id="address2-error">Testing</span>
+                            <span class="error-span" id="address2-error"></span>
                         </div>
                         <div class="form-item">
                             <label for="state">State <sup>*</sup></label>
@@ -157,9 +157,9 @@
                             <label for="pincode">Pincode <sup>*</sup></label>
                             <div class="form-item-control flex">
                                 <input type="email" id="pincode">
-                                <img src="../assets/icons/tick-green.svg" alt="tick" style="height: 20px;">
+                                <img src="../assets/icons/tick-green.svg" alt="tick" id="pincode-tick" hidden style="height: 20px;">
                             </div>
-                            <span class="error-span" id="pincode-error">Testing</span>
+                            <span class="error-span" id="pincode-error"></span>
                         </div>
                     </section>
                     <section class="form-section">
@@ -171,17 +171,17 @@
                             <label for="new-password">New Password</label>
                             <div class="form-item-control flex">
                                 <input type="password" id="new-password">
-                                <img src="../assets/icons/tick-green.svg" alt="tick" style="height: 20px;">
+                                <img src="../assets/icons/tick-green.svg" alt="tick" id="new-password-tick" hidden style="height: 20px;">
                             </div>
-                            <span class="error-span" id="new-password-error">Testing</span>
+                            <span class="error-span" id="new-password-error"></span>
                         </div>
                         <div class="form-item">
                             <label for="confirm-password">Confirm Password</label>
                             <div class="form-item-control flex">
                                 <input type="password" id="confirm-password">
-                                <img src="../assets/icons/tick-green.svg" alt="tick" style="height: 20px;">
+                                <img src="../assets/icons/tick-green.svg" alt="tick" id="confirm-password-tick" hidden style="height: 20px;">
                             </div>
-                            <span class="error-span" id="confirm-password-error">Testing</span>
+                            <span class="error-span" id="confirm-password-error"></span>
                         </div>
                         <div class="form-item">
                             <div class="form-item-control flex items-center">
@@ -195,7 +195,7 @@
                             <input type="checkbox" id="agreement">
                             <label for="agreement">I agree to the <strong>Terms & Services</strong> of Scoops.</label>
                         </div>
-                        <span class="error-span" id="agreement-error">Testing</span>
+                        <span class="error-span" id="agreement-error"></span>
                     </div>
                     <div class="cta">
                         <input class="btn btn-primary btn-large" type="submit" id="register-btn" value="Register">
