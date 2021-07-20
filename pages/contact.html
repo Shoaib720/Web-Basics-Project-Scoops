@@ -10,6 +10,8 @@
     <link rel="icon" href="../assets/icons/ice-cream.png" type="image/x-icon">
     <link rel="stylesheet" href="../styles/utils.css">
     <link rel="stylesheet" href="../styles/contact-style.css">
+    <script src="../js/lib/jquery-3.6.0.min.js"></script>
+    <script src="../js/contact-validation.js"></script>
     <title>Scoops-CONTACT</title>
 </head>
 <body>
@@ -49,23 +51,26 @@
             </div>
             <div class="contact-form-area">
                 <div class="form-title">Contact us</div>
-                <form novalidate>
+                <form novalidate id="contact-form">
                     <div class="form-item">
                         <div class="form-item-control flex items-center">
                             <input type="text" id="name" placeholder="Your name...">
                         </div>
+                        <span class="error-span" id="name-error"></span>
                     </div>
                     <div class="form-item">
                         <div class="form-item-control flex items-center">
                             <input type="email" id="email" placeholder="Your email...">
                         </div>
-                        <span class="error-span" id="email-error">Testing</span>
+                        <span class="error-span" id="email-error"></span>
                     </div>
                     <div class="form-item">
                         <div class="form-item-control flex items-center">
-                            <textarea id="message" cols="30" rows="5" placeholder="Your message..."></textarea>
+                            <textarea id="message" cols="30" rows="4" maxlength="250" placeholder="Your message..."></textarea>
                         </div>
-                        <span class="error-span" style="color: var(--primary-color);" id="email-error">250 Characters Remaining</span>
+                        <span class="error-span" style="color: var(--primary-color);" id="message-length">250 Characters Remaining</span>
+                        <br>
+                        <span class="error-span" id="message-error"></span>
                     </div>
                     <div class="cta">
                         <input class="btn btn-primary btn-large" type="submit" id="send-btn" value="Send">
